@@ -3,7 +3,7 @@ public class Solution {
         int left = 0;
         int right = nums.Length - 1;
         int mid = 0;
-        while (left < right) {
+        while (left <= right) {
             mid = (left + right) / 2;
             if (nums[mid] == target)
             {
@@ -18,12 +18,6 @@ public class Solution {
                 right = mid - 1;
             }
         }
-        if (nums[left] < target)
-        {
-            return left + 1;
-        }
-        else {
-            return left ;
-        }
+        return left ;
     }
 }
